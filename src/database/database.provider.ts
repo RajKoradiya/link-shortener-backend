@@ -8,7 +8,7 @@ export const databaseProvider = [
       const config = dataConfiguration;
       const dataSource = new DataSource(config);
 
-      return dataSource.initialize().then(() => console.log('connected'));
+      return dataSource.initialize();
     },
   },
 ];

@@ -1,5 +1,6 @@
 import { DataSourceOptions } from 'typeorm';
 import * as dotenv from 'dotenv';
+import { LongLinks } from 'src/module/long_links/entities/long_link.entity';
 dotenv.config();
 
 export const dataConfiguration: DataSourceOptions = {
@@ -9,4 +10,6 @@ export const dataConfiguration: DataSourceOptions = {
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
+  entities: [LongLinks],
+  synchronize: true,
 };
