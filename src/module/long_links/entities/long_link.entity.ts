@@ -10,4 +10,7 @@ export class LongLinks {
 
   @Column()
   short_link: string;
+
+  @Column()
+  short_link_id: string;
 }
