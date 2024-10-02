@@ -9,12 +9,12 @@ export class longLinkService {
     private readonly longlink: Repository<LongLinks>,
   ) {}
 
-  async create(linkData) {
+  async create(linkData: object) {
     const newLinkData = await this.longlink.create(linkData);
     return await this.longlink.save(newLinkData);
   }
 
-  async findById(id): Promise<LongLinks[]> {
+  async findById(id: string): Promise<LongLinks[]> {
     return await this.longlink.findBy({ short_link_id: id });
   }
 }
